@@ -57,6 +57,11 @@
             "description": "Showing all HTTP URIs"
         },
         {
+            "name": "SSL Traffic",
+            "value": "_path == \"ssl\" | cut ts, id.orig_h, id.resp_h, server_name, subject ,issuer",
+            "description": "Showing ssl relate traffic"
+        },
+        {
             "name": "Unique Network Connections",
             "value": "_path==\"conn\" | cut id.orig_h, id.resp_p, id.resp_h | sort | uniq",
             "description": "Displays a table showing all unique source:port:destination connections pairings"
